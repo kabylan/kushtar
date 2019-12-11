@@ -1,0 +1,147 @@
+﻿@model kushtar.Models.Kushtar;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body class="bg-dark">
+
+    <!-- Button elements to manage -->
+    <div class="d p-2 justify-content-right">
+
+        <a asp-action="Index" class="btn btn-outline-danger">Back</a>
+
+        <div class="btn btn-primary" onclick="Play()">
+            Play
+        </div>
+
+    </div>
+
+    <br>
+    <!-- Buttons to dance -->
+    <article class="">
+
+        <div class="d-flex justify-content-center">
+            <button class="btn-lg  m-1 btn-dark ha-button" onclick="cubeClicked(0)">0</button>
+            <button class="btn-lg  m-1 btn-dark ha-button" onclick="cubeClicked(1)">1</button>
+            <button class="btn-lg  m-1 btn-dark ha-button" onclick="cubeClicked(2)">2</button>
+            <button class="btn-lg  m-1 btn-dark ha-button" onclick="cubeClicked(3)">3</button>
+            <button class="btn-lg  m-1 btn-dark ha-button" onclick="cubeClicked(4)">4</button>
+            <button class="btn-lg  m-1 btn-dark ha-button" onclick="cubeClicked(5)">5</button>
+            <button class="btn-lg  m-1 btn-dark ha-button" onclick="cubeClicked(6)">6</button>
+            <button class="btn-lg  m-1 btn-dark ha-button" onclick="cubeClicked(7)">7</button>
+
+        </div>
+
+        <div class="d-flex justify-content-center">
+
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(8)">8</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(9)">9</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(10)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(11)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(12)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(13)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(14)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(15)">0</button>
+
+        </div>
+
+        <div class="d-flex justify-content-center">
+
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(16)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(17)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(18)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(19)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(20)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(21)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(22)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(23)">0</button>
+
+        </div>
+
+
+        <div class="d-flex justify-content-center">
+
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(24)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(25)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(26)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(27)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(28)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(29)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(30)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(31)">0</button>
+
+        </div>
+
+        <div class="d-flex justify-content-center">
+
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(32)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(33)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(34)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(35)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(36)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(37)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(38)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(39)">0</button>
+
+        </div>
+
+        <div class="d-flex justify-content-center">
+
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(40)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(41)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(42)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(43)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(44)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(45)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(46)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(47)">0</button>
+
+        </div>
+
+        <div class="d-flex justify-content-center">
+
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(48)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(49)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(50)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(51)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(52)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(53)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(54)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(55)">0</button>
+
+        </div>
+
+        <div class="d-flex justify-content-center">
+
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(56)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(57)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(58)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(59)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(60)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(61)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(62)">0</button>
+            <button class="btn-lg m-1 btn-dark ha-button" onclick="cubeClicked(63)">0</button>
+
+        </div>
+
+    </article>
+
+    <!-- Bit edited JavaScript code to do something -->
+    <script type="text/javascript" src="~/js/see.js"></script>
+
+    <script>
+
+        cadrs = JSON.parse("@ViewBag.Cadrs").slice();
+
+        timesForCadrs = JSON.parse("@ViewBag.Times").slice();
+
+    </script>
+</body>
+</html>

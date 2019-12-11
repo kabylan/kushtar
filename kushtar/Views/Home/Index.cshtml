@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Kushtar</h1>
+    <br /><br />
+          <p>
+              Kushtar - is the thing with which you can see the music.
+          </p>
+          <p>
+              <b> Music + Kushtar = Great Mood and Soul Dancing</b>
+          </p>
+    <div>
+        <a asp-controller="Kushtars" asp-action="Index" class="btn btn-success">See music</a>
+    </div>
+    <br />
+    <p>
+        And also with Kushtar you can add your vision of any music.
+    </p>
+    <div>
+        <a asp-controller="Kushtars" asp-action="Create" class="btn btn-outline-success">Add</a>
+    </div>
+</div>

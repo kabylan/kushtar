@@ -1,0 +1,46 @@
+﻿@model IEnumerable<kushtar.Models.Kushtar>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Kushtars</h1>
+
+<p>
+    <a asp-action="Create">Create new Kushtar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Author)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Music)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Published)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Music)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Published)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id">See</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
